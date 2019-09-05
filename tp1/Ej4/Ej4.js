@@ -2,22 +2,22 @@
 
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
-canvas.width = window.innerWidth*0.8;
-canvas.height = window.innerHeight*0.6;
+canvas.width = parent.innerWidth*0.8;
+canvas.height = parent.innerHeight*0.6;
 let width = canvas.width;
 let height = canvas.height; 
-let proportion = 255/height;
+let prop = 255/height;
 
 window.onresize = () => {
-    canvas.width = window.innerWidth*0.8;
-    canvas.height =  window.innerHeight*0.6;
+    canvas.width = parent.innerWidth*0.8;
+    canvas.height =  parent.innerHeight*0.6;
     width = canvas.width;
     height = canvas.height;
-    proportion = 255/height; 
-    drawCanvas()
+    prop = 255/height; 
+    drawPoint4()
 }
 
-const drawCanvas = () => {
+const drawPoint4 = () => {
 
     let imageData = ctx.createImageData(width,height);
 
@@ -29,13 +29,13 @@ const drawCanvas = () => {
             imageData.data[index+1] = color; 
             imageData.data[index+2] = color; 
             imageData.data[index+3] = 255;
-            color+= proportion;
+            color+= prop;
         }
         color=0;
     }
     ctx.putImageData(imageData,0,0)
 }
 
-drawCanvas()
+drawPoint4()
 
 //******************* punto4 *******************************

@@ -1,22 +1,22 @@
 let canvas = document.getElementById('canvas');
 let ctx = canvas.getContext('2d');
-canvas.width = window.innerWidth*0.8;
-canvas.height =  window.innerHeight*0.6;
+canvas.width = parent.innerWidth*0.8;
+canvas.height =  parent.innerHeight*0.6;
 let width = canvas.width;
 let height = canvas.height; 
 let sections = 2;
 let prop = (255/width)*sections;
 
 window.onresize = () => {
-    canvas.width = window.innerWidth*0.8;
-    canvas.height =  window.innerHeight*0.6;
+    canvas.width = parent.innerWidth*0.8;
+    canvas.height =  parent.innerHeight*0.6;
     width = canvas.width;
     height = canvas.height; 
     prop = (255/width)*sections;
-    drawCanvas()
+    drawPoint5()
 }
 
-const drawCanvas = () => {
+const drawPoint5 = () => {
 
     let imageData = ctx.createImageData(width,height);
     let r = 0;
@@ -56,4 +56,4 @@ const drawCanvas = () => {
     ctx.putImageData(imageData,0,0)
 }
 
-drawCanvas()
+drawPoint5()
