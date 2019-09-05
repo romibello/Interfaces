@@ -2,15 +2,15 @@
 
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
-canvas.width = parent.innerWidth*0.8;
-canvas.height = parent.innerHeight*0.6;
+canvas.width = parent.innerWidth*0.4;
+canvas.height =  parent.innerHeight*0.3;
 let width = canvas.width;
-let height = canvas.height; 
-let prop = 255/height;
+let height = canvas.height;
+prop = 255/height; 
 
 window.onresize = () => {
-    canvas.width = parent.innerWidth*0.8;
-    canvas.height =  parent.innerHeight*0.6;
+    canvas.width = parent.innerWidth*0.4;
+    canvas.height =  parent.innerHeight*0.3;
     width = canvas.width;
     height = canvas.height;
     prop = 255/height; 

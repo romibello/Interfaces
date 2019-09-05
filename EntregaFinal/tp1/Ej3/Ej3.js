@@ -2,15 +2,14 @@
 let canvas = document.querySelector('canvas');
 let ctx = canvas.getContext("2d");
 ctx.fillStyle = "#3498db ";
-canvas.width = parent.innerWidth*0.8;
-canvas.height = parent.innerHeight*0.6;
+canvas.width = parent.innerWidth*0.4;
+canvas.height =  parent.innerHeight*0.3;
 let width = canvas.width;
 let height = canvas.height; 
 
-
 window.onresize = () => {
-  canvas.width = parent.innerWidth*0.8;
-  canvas.height =  parent.innerHeight*0.6;
+  canvas.width = parent.innerWidth*0.4;
+  canvas.height =  parent.innerHeight*0.3;
   width = canvas.width;
   height = canvas.height;
   drawPoint3()

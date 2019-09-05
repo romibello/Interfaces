@@ -1,15 +1,15 @@
 let canvas = document.getElementById('canvas');
 let ctx = canvas.getContext('2d');
-canvas.width = parent.innerWidth*0.8;
-canvas.height =  parent.innerHeight*0.6;
+canvas.width = parent.innerWidth*0.4;
+canvas.height =  parent.innerHeight*0.3;
 let width = canvas.width;
 let height = canvas.height; 
 let sections = 2;
 let prop = (255/width)*sections;
 
 window.onresize = () => {
-    canvas.width = parent.innerWidth*0.8;
-    canvas.height =  parent.innerHeight*0.6;
+    canvas.width = parent.innerWidth*0.4;
+    canvas.height =  parent.innerHeight*0.3;
     width = canvas.width;
     height = canvas.height; 
     prop = (255/width)*sections;
